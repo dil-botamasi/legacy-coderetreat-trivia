@@ -22,8 +22,10 @@ describe('The test environment', () => {
         game.add("Chet");
         game.add("Pat");
         game.add("Sue");
-
+        
         game.roll(3)
+        game.roll(3)
+
 
         const output = consoleStub.getCalls().join('\n')
         verify('tests','approval', output)
