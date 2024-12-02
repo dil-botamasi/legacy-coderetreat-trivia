@@ -30,4 +30,23 @@ describe('The test environment', () => {
         const output = consoleStub.getCalls().join('\n')
         verify('tests','approval', output)
     })
+
+    it("should run the game", () => {
+        const game = new Game()
+
+        game.add("Chet");
+        game.add("Pat");
+        game.add("Sue");
+        game.add("Pali");
+        game.add("Bali");
+        game.add("Suzey");
+        game.add("Mali");
+        
+        game.roll(3)
+        game.roll(3)
+
+
+        const output = consoleStub.getCalls().join('\n')
+        verify('tests','7players', output)
+    })
 });
